@@ -2,11 +2,16 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [liveLink, setLiveLink] = useState('');
 
   return (
     <>
-      <h1 className='text-primary'>Tiktok Live Updates</h1>
+      <div className='flex flex-col items-center justify-center w-screen h-screen'>
+        <h1 className='text-center text-4xl md:text-6xl'>Tiktok Live Updates</h1>
+        <br></br>
+        <input type="text" placeholder="Enter TikTok live link here" className="input"/>
+        <p>{liveLink}</p>
+      </div>
     </>
   )
 }
